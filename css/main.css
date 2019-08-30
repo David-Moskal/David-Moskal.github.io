@@ -17,6 +17,57 @@ html {
   line-height: 1.4;
 }
 
+/*header*/
+.header {
+  padding: 5px 8px;
+  background: #134c61;
+  color: #FFF;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Page content */
+.content {
+  padding: 12px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+/*about*/
+
+.about {
+
+}
+
+#about .inner {
+  padding: 20px 20px;
+  background-color: #1f2426;
+}
+
+#about p {
+  text-align: center;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #FFF;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+
+
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
