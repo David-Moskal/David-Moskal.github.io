@@ -17,6 +17,26 @@ html {
   line-height: 1.4;
 }
 
+/*Navigation
+
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #1f2426;
+}
+
+/* Navbar links */
+#navbar a {
+  float: center;
+  display: inline;
+  color: #FFF;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
 /*header*/
 .header {
   padding: 5px 8px;
@@ -46,16 +66,37 @@ html {
 
 /*about*/
 
-.about {
-
+#about p{
+  text-align: left;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #FFF;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 
-#about .inner {
+#about ul{
+  text-align: left;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #FFF;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#about .inner{
   padding: 20px 20px;
   background-color: #1f2426;
 }
 
-#about p {
+#intro .inner {
+  padding: 20px 20px;
+  background-color: #1f2426;
+}
+
+#intro p {
   text-align: center;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 0.3em;
