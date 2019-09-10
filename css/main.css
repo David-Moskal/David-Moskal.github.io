@@ -23,18 +23,25 @@ html {
 #navbar {
   overflow: hidden;
   background-color: #1f2426;
+  position: fixed;
+  opacity:
 }
 
 /* Navbar links */
 #navbar a {
   float: center;
-  display: inline;
+  display: block;
   color: #FFF;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 20px;
   text-align: center;
   padding: 14px;
   text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #555;
+  color: white;
 }
 
 /*header*/
