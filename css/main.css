@@ -12,70 +12,162 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #5faeb6;
   font-size: 1em;
   line-height: 1.4;
 }
 
-/*Navigation
+/*Header*/
 
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: #1f2426;
-  position: fixed;
-  opacity:
-}
-
-/* Navbar links */
-#navbar a {
-  float: center;
-  display: block;
-  color: #FFF;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 20px;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-#navbar a:hover {
-  background-color: #2A2932;
-  color: white;
-}
-
-/*header*/
 .header {
   padding: 5px 8px;
-  background: #134c61;
+  background: #5faeb6;
   color: #FFF;
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Raleway";
   font-size: 16px;
   text-align: center;
 }
 
+/*Navigation*/
+
+div.container {
+  position: sticky;
+  top: 0px;
+  font-family: 'Lato';
+  font-size: 1rem;
+  background: #222;
+  padding: 1rem 1rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+
+div.container a {
+  color: #f6f7f9;
+  font-family: "Raleway";
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+div.navbar a:before, div.navbar a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #f6f7f9;
+  content: "";
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+div.navbar a:before
+{
+  top: 0px;
+  transform: translateY(10px);
+}
+
+div.navbar a:after
+{
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+
+div.navbar a:hover:before, div.navbar a:hover:after
+{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Button */
+
+/* .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ddd;
+  border: none;
+  float: left;
+  color: #222;
+  text-align: center;
+  font-size: 28px;
+  padding: 0px;
+  width: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} */
+
+
+
 /* Page content */
 .content {
-  padding: 12px;
+  padding: 6px;
+}
+
+body {
+  font-family: "Raleway";
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
+/* .sticky {
   position: fixed;
   top: 0;
   width: 100%
-}
+} */
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+/* .sticky + .content {
   padding-top: 102px;
+} */
+
+/*Introduction*/
+
+#intro .inner {
+  padding: 20px 20px;
+  background-color: #323a45;
 }
 
-/*about*/
+#intro p {
+  text-align: center;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  color: #FFF;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+/*About*/
 
 #about p{
   text-align: left;
-  font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 0.3em;
   font-weight: 700;
   color: #FFF;
@@ -85,7 +177,6 @@ html {
 
 #about ul{
   text-align: left;
-  font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 0.3em;
   font-weight: 700;
   color: #FFF;
@@ -95,25 +186,16 @@ html {
 
 #about .inner{
   padding: 20px 20px;
-  background-color: #1f2426;
+  background-color: #323a45;
 }
 
-#intro .inner {
-  padding: 20px 20px;
-  background-color: #1f2426;
-}
 
-#intro p {
+/*Projects*/
+
+#projects p {
   text-align: center;
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 0.3em;
-  font-weight: 700;
-  color: #FFF;
-  font-size: 30px;
-  text-transform: uppercase;
+
 }
-
-
 
 
 /*

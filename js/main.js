@@ -173,6 +173,15 @@
         }
     };
 
+    $(document).ready(function() {
+        $('div.navbar').on('click', 'a', function(e) {       
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 1000);
+        });
+    });
+
     $.fixedTOC.defaultSettings = {
         // non-customizable settings
         tocHeight        : null,
@@ -198,3 +207,8 @@
     };
 
 })(jQuery);
+
+(function(e)  {
+
+});
+

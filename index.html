@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+
   <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
@@ -26,24 +28,15 @@
   <meta name="theme-color" content="#ffffff">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
 
-
 </head>
 
 <body>
-  <div id="navbar">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#extracurriculars">Extracurriculars</a>
-  </div>
-
-  <div class = "header" id = "myHeader">
-    <h1 id = "h1"><b>DAVID MOSKAL<b></h1>
-  </div>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -52,20 +45,30 @@
 
   <!--IMAGES-->
   <!--<img src="pic_trulli.jpg" alt="Italian Trulli" style="width:500px;height:600px;"> -->
-  <br>
+
+  <div class = "header" id = "myHeader">
+      <h1 id = "h1"><b>DAVID MOSKAL<b></h1>
+  </div>
+
+  <div class = "container">
+    <!-- <button class = "button"><span>=</span></button> -->
+    <div class="navbar">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#extracurriculars">Extracurriculars</a>
+    </div>
+  </div>
 
   <!-- ABOUT-->
   <div id = "intro">
     <div class = "inner">
-      <p>MY COMPUTER SCIENCE PORTFOLIO WEBSITE</p>
+      <p><b>MY COMPUTER SCIENCE PORTFOLIO WEBSITE<b></p>
     </div>
   </div>
 
-  <br>
-
   <div id = "about">
     <div class = "inner">
-      <p>ABOUT ME</p> <img src = "tile-wide.png" alt = "Picture of me" width = "100" height = "50" align = "top">
+      <p><b>ABOUT ME<b></p> <img src = "tile-wide.png" alt = "Picture of me" width = "100" height = "50" align = "top">
       <br>
       <p>I am a computer science student at conant high school.</p>
       <br>
@@ -78,12 +81,51 @@
       </ul>
   </div>
 
+  <div id = "projects">
+      <div class = "inner">
+          <p><b>PROJECTS<b></p>
+          <br>
+          <p>The Key</p>
+
+          <p>PuzzleJumpers</p>
+          <p>TBD Side-Scroller RPG</p>
+      </div>
+  </div>
+
+  <div id = "extracurriculars">
+    <div class = "inner">
+
+    </div>
+  </div>
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+
+  <!--REACT-->
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script>const e = React.createElement;</script>
+  <script src ="js/components/FeaturedProjects.js"></script>
+
+  <script>
+    let projects = [
+      {
+        name: "The Key",
+        icon: ""
+      }
+    ]
+
+    let projectsContainer = e(Container, { name: "Projects", child: FeaturedProjects, data: projects, key: 0 }, null)
+    ReactDOM.render(projectsContainer, document.getElementById('projects'))
+  </script>
+
+
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -93,13 +135,7 @@
 
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-  <!-- Load our React component. -->
-  <script src="like_button.js"></script>
 </body>
 
 </html>
